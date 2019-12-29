@@ -24,3 +24,9 @@ div .rounded-circle p {
 .cursor-pointer {
   cursor: pointer;
 }
+
+.navbar-brand {
+  font-size: 30px;
+  font-family: Verdana;
+  font: bold;
+}

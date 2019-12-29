@@ -13,7 +13,7 @@ export interface ForecastWeather {
   state_code: number;
 }
 
-interface Weather {
+export interface Weather {
   wind_cdir: string;
   rh: number;
   pod: string;

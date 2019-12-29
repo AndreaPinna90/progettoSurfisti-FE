@@ -4,6 +4,7 @@ import {BeachesListComponent} from './list/beaches-list.component';
 import {BeachDetailComponent} from './detail/beach-detail.component';
 import {BeachCreateComponent} from './create/beach-create.component';
 import {BeachEditComponent} from './edit/beach-edit.component';
+import {BeachSurfComponent} from './surf/beach-surf.component';
 
 const routes: Routes = [
   {
@@ -27,7 +28,10 @@ const routes: Routes = [
     path: 'edit/:id',
     component: BeachEditComponent,
   },
-
+  {
+    path: 'surf',
+    component: BeachSurfComponent,
+  }
 ];
 
 

@@ -14,13 +14,16 @@ import {CoreModule} from '../../core/core.module';
 import {WeatherService} from '../../shared/services/weather.service';
 import {TrafficService} from '../../shared/services/traffic.service';
 import {SortService} from '../../shared/services/sort.service';
+import { from } from 'rxjs';
+import { BeachSurfComponent } from './surf/beach-surf.component';
 
 @NgModule({
   declarations: [
     BeachesListComponent,
     BeachEditComponent,
     BeachDetailComponent,
-    BeachCreateComponent
+    BeachCreateComponent,
+    BeachSurfComponent
   ],
   imports: [
     CoreModule,
