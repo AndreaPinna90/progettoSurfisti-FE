@@ -17,6 +17,8 @@ export interface Beach {
   weatherIcon?: string;
   weather: CurrentWeather;
   traffic?: number;
+  wind_speed?: number;
+  wind_direction?: string;
 }
 
 export const Orientation = {

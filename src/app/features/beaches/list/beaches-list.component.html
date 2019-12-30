@@ -60,7 +60,8 @@
       <th>Affollamento</th>
 <!--      <th>Traffico</th>-->
       <th>Meteo</th>
-      <th>Vento</th>
+      <th>Vento(m/s)</th>
+      <th>Direzione Vento</th>
     </tr>
     </thead>
     <tbody>
@@ -75,7 +76,8 @@
 <!--        <div class="rounded-circle m-auto text-center {{getTrafficClass(beach.traffic)}}"><p>{{beach.traffic}}</p></div>-->
 <!--      </td>-->
       <td class="weather-icon"><img [src]="beach.weatherIcon" alt="meteo"></td>
-      <td></td>
+      <td>{{beach.wind_speed}}</td>
+      <td>{{beach.wind_direction}}</td>
     </tr>
     </tbody>
   </table>

@@ -54,6 +54,8 @@ export class BeachesListComponent implements OnInit {
       .subscribe((weather: CurrentWeather) => {
         beach.weatherIcon = this.getWeatherIconPath(weather.data[0].weather.icon);
         beach.weather = weather;
+        beach.wind_speed= weather.data[0].wind_spd;
+        beach.wind_direction = weather.data[0].wind_cdir;
       }, err => {
         console.error(err);
       });
