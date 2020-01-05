@@ -1,0 +1,7 @@
+.table-element:hover {
+    background-color: lightblue;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
