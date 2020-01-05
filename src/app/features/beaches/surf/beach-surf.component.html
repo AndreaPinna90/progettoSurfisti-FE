@@ -17,3 +17,38 @@
     </ul>
   </div>
 </nav>
+
+<div class="container">
+  <h1 class="my-3">
+    Le 10 spiagge migliori per fare Surf in Sardegna
+    <a [routerLink]="['../create']">
+      <i class="fas fa-plus-square" aria-hidden="true"></i>
+    </a>
+  </h1>
+<table *ngIf="loaded && beaches.length > 0" class="table">
+    <thead>
+    <tr class="text-center">
+      <th>Nome<p></p></th>
+      <th>Città<p></p></th>
+      <th>Posizione<br>(Lat - Long)</th>
+      <!--<th>Traffico</th> -->
+      <th>Vento<br>(m/s)</th>
+      <th>Direzione<br>Vento</th>
+      <th>Meteo<p></p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="table-element cursor-pointer text-center" *ngFor="let beach of beaches.slice(0, 10)" (click)="goToDetails(beach.id)">
+      <td>{{ beach.name }}</td>
+      <td>{{ beach.city + '(' + beach.province + ')' }}</td>
+      <td>{{ beach.latitude}} <br> {{beach.longitude }}</td>
+      <td>{{beach.wind_speed}}</td>
+      <td>{{beach.wind_direction}}</td>
+   <!--   <td>-->
+   <!--   <div class="rounded-circle m-auto text-center {{getTrafficClass(beach.traffic)}}"><p>{{beach.traffic}}</p></div>-->
+   <!--  </td>-->
+      <td class="weather-icon"><img [src]="beach.weatherIcon" alt="meteo"></td>
+      
+      
+    </tr>
+

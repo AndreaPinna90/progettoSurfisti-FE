@@ -17,3 +17,9 @@ div .rounded-circle p {
 img {
   border-radius: 5px;
 }
+
+#trafficIcon{
+  display: inline-block;
+  width: 2cm;
+  
+}

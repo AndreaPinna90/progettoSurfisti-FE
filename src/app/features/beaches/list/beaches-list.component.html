@@ -12,14 +12,14 @@
         <a class="nav-link" href="http://localhost:4200/beaches/list">Meteo <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="http://localhost:4200/beaches/surf">Surfer </a>
+        <a class="nav-link" href="http://localhost:4200/beaches/surf">Surf </a>
       </li>
     </ul>
   </div>
 </nav>
 <div class="container">
   <h1 class="my-3">
-    Lista delle 10 spiagge migliori
+    Le 10 spiagge migliori della Sardegna
     <a [routerLink]="['../create']">
       <i class="fas fa-plus-square" aria-hidden="true"></i>
     </a>
@@ -38,10 +38,10 @@
                [(ngModel)]="radioValue">
         <label class="custom-control-label" for="summer_crowding">Affollamento</label>
       </div>
-<!--      <div class="custom-control custom-radio custom-control-inline">-->
-<!--        <input type="radio" id="traffic" name="radio" class="custom-control-input" value="traffic" [(ngModel)]="radioValue">-->
-<!--        <label class="custom-control-label" for="traffic">Traffico</label>-->
-<!--      </div>-->
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" id="traffic" name="radio" class="custom-control-input" value="traffic" [(ngModel)]="radioValue">
+        <label class="custom-control-label" for="traffic">Traffico</label>
+      </div>
       <div class="custom-control custom-radio custom-control-inline">
         <input type="radio" id="weather" name="radio" class="custom-control-input" value="weather" [(ngModel)]="radioValue">
         <label class="custom-control-label" for="weather">Meteo</label>
@@ -54,30 +54,26 @@
     <tr class="text-center">
       <th>Nome</th>
       <th>Città</th>
-      <th>Posizione</th>
-      <th>Orientamento</th>
+      <th>Orientamento Spiaggia</th>
       <th>Parcheggio</th>
       <th>Affollamento</th>
-<!--      <th>Traffico</th>-->
+      <th>Traffico</th>
       <th>Meteo</th>
-      <th>Vento(m/s)</th>
-      <th>Direzione Vento</th>
     </tr>
     </thead>
     <tbody>
     <tr class="table-element cursor-pointer text-center" *ngFor="let beach of beaches.slice(0, 10)" (click)="goToDetails(beach.id)">
       <td>{{ beach.name }}</td>
       <td>{{ beach.city + ' (' + beach.province + ')' }}</td>
-      <td>{{ beach.latitude + ', ' + beach.longitude }}</td>
       <td><i class="fas fa-2x {{ getOrientationArrow(beach.orientation) }}"></i></td>
       <td class="text-center"><i class="fas fa-2x {{getInfoClass(beach.park)}}"></i></td>
       <td><i class="fas fa-2x {{getInfoClass(beach.summer_crowding)}}"></i></td>
-<!--      <td>-->
-<!--        <div class="rounded-circle m-auto text-center {{getTrafficClass(beach.traffic)}}"><p>{{beach.traffic}}</p></div>-->
-<!--      </td>-->
+      <td>
+        <!--<div class="rounded-circle m-auto text-center {{getTrafficClass(beach.traffic)}}"><p>{{beach.traffic}}</p></div>-->
+        <div class="rounded with text-center {{getTrafficClass(beach.traffic)}}"><p>{{beach.traffic}}</p></div>
+      </td>
       <td class="weather-icon"><img [src]="beach.weatherIcon" alt="meteo"></td>
-      <td>{{beach.wind_speed}}</td>
-      <td>{{beach.wind_direction}}</td>
+     
     </tr>
     </tbody>
   </table>

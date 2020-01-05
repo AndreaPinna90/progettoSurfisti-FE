@@ -20,7 +20,7 @@ export class BeachDetailComponent implements OnInit {
     private router: Router,
     private beachService: BeachService,
     private weatherService: WeatherService,
-    // private trafficService: TrafficService
+    private trafficService: TrafficService
   ) {
   }
 
@@ -33,8 +33,11 @@ export class BeachDetailComponent implements OnInit {
       .subscribe((data: Beach) => {
         this.beach = data;
         this.getWeather();
-        // this.getTraffic();
+        this.getTraffic();
+        
       });
+  
+  
   }
 
   deleteBeach(id) {
@@ -55,7 +58,7 @@ export class BeachDetailComponent implements OnInit {
       });
   };
 
-/*  getTraffic = () => {
+  getTraffic = () => {
     this.trafficService.getTraffic(this.beach.city)
       .subscribe((traffic: Traffic) => {
         if (traffic) {
@@ -64,9 +67,9 @@ export class BeachDetailComponent implements OnInit {
       }, err => {
         console.error(err);
       });
-  };*/
+  };
 
   getWeatherIconPath = (icon: string): string => `https://www.weatherbit.io/static/img/icons/${icon}.png`;
-  // getTrafficClass = (value: number) => value >= 80 ? 'bg-danger' : (value > 70 && value < 80 ? 'bg-warning' : 'bg-success');
+  getTrafficClass = (value: number) => value >= 80 ? 'bg-danger' : (value > 70 && value < 80 ? 'bg-warning' : 'bg-success');
   getInfoClass = (value: boolean) => value ? 'fa-check-circle text-success' : 'fa-times-circle text-danger';
 }

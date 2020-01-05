@@ -36,7 +36,7 @@ export class BeachesListComponent implements OnInit {
       .subscribe((resBeaches: Array<Beach>) => {
           for (const beach of resBeaches) {
             this.getWeather(beach);
-            // this.getTraffic(beach);
+            this.getTraffic(beach);
             this.sortBeaches();
           }
 
@@ -61,7 +61,7 @@ export class BeachesListComponent implements OnInit {
       });
   };
 
-/*
+
   getTraffic = (beach: Beach) => {
     this.trafficService.getTraffic(beach.city)
       .subscribe((traffic: Traffic) => {
@@ -72,7 +72,7 @@ export class BeachesListComponent implements OnInit {
         console.error(err);
       });
   };
-*/
+
 
   radioChange = () => {
     this.sortBeaches();
@@ -83,7 +83,7 @@ export class BeachesListComponent implements OnInit {
   };
 
   getWeatherIconPath = (icon: string): string => `https://www.weatherbit.io/static/img/icons/${icon}.png`;
-  // getTrafficClass = (value: number) => value >= 80 ? 'bg-danger' : (value > 70 && value < 80 ? 'bg-warning' : 'bg-success');
+  getTrafficClass = (value: number) => value >= 80 ? 'bg-danger' : (value > 70 && value < 80 ? 'bg-warning' : 'bg-success');
   goToDetails = (id: number) => this.router.navigate([`beaches/details/${id}`]);
   getInfoClass = (value: boolean) => value ? 'fa-check-circle text-success' : 'fa-times-circle text-danger';
   getOrientationArrow = (orientation: string) => {
