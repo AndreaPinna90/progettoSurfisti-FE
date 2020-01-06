@@ -1,54 +1,155 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="http://localhost:4200/">TNV Beaches </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+  <a class="navbar-brand" href="http://localhost:4200/">
+    <img src="assets/images/logo_tnv_light_2019.png"  alt="Home page" height="40">
+  </a>
   <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
+    <ul class="nav navbar-nav navbar-right">
+      <li class="nav-item ">
+        <a class="nav-link" href="http://localhost:4200/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://localhost:4200/beaches/list">Meteo</a>
+      </li>
       <li class="nav-item active">
-        <a class="nav-link" href="http://localhost:4200/">Home </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="http://localhost:4200/beaches/list">Meteo <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="http://localhost:4200/beaches/surf">Surfer </a>
+        <a class="nav-link" href="http://localhost:4200/beaches/surf">Surf</a>
       </li>
     </ul>
   </div>
 </nav>
 
+<!--Header-->
+<div class="row header">
+  <div class="col-sm-12 header">
+    <h1 class="page-title">Surf</h1>
+  </div>
+</div>    
+
+<!--Table-->
 <div class="container">
   <h1 class="my-3">
-    Le 10 spiagge migliori per fare Surf in Sardegna
-    <a [routerLink]="['../create']">
-      <i class="fas fa-plus-square" aria-hidden="true"></i>
-    </a>
+    Le spiagge migliori per il Surf in Sardegna.
   </h1>
+  
+  <div *ngIf="loaded" class="order-list my-3 text-right">
+    <h4 class="d-inline-block mr-2">Ordina per: </h4>
+    <form (change)="radioChange()">
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" id="wind_speed" name="radio" class="custom-control-input" value="wind_speed"
+               [(ngModel)]="radioValue">
+        <label class="custom-control-label" for="wind_speed">Vento</label>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" id="wind_direction" name="radio" class="custom-control-input" value="wind_direction"
+               [(ngModel)]="radioValue">
+        <label class="custom-control-label" for="wind_direction">Direzione Vento</label>
+      </div>
+    </form>
+  </div>
+
 <table *ngIf="loaded && beaches.length > 0" class="table">
     <thead>
     <tr class="text-center">
       <th>Nome<p></p></th>
       <th>Città<p></p></th>
       <th>Posizione<br>(Lat - Long)</th>
-      <!--<th>Traffico</th> -->
+<!--      <th>Traffico</th>-->
       <th>Vento<br>(m/s)</th>
-      <th>Direzione<br>Vento</th>
+      <th>Direzione <br> Vento</th>
       <th>Meteo<p></p></th>
     </tr>
     </thead>
     <tbody>
     <tr class="table-element cursor-pointer text-center" *ngFor="let beach of beaches.slice(0, 10)" (click)="goToDetails(beach.id)">
       <td>{{ beach.name }}</td>
-      <td>{{ beach.city + '(' + beach.province + ')' }}</td>
+      <td>{{ beach.city + ' (' + beach.province + ')' }}</td>
       <td>{{ beach.latitude}} <br> {{beach.longitude }}</td>
       <td>{{beach.wind_speed}}</td>
       <td>{{beach.wind_direction}}</td>
-   <!--   <td>-->
-   <!--   <div class="rounded-circle m-auto text-center {{getTrafficClass(beach.traffic)}}"><p>{{beach.traffic}}</p></div>-->
-   <!--  </td>-->
+<!--      <td>-->
+<!--        <div class="rounded-circle m-auto text-center {{getTrafficClass(beach.traffic)}}"><p>{{beach.traffic}}</p></div>-->
+<!--      </td>-->
       <td class="weather-icon"><img [src]="beach.weatherIcon" alt="meteo"></td>
       
       
     </tr>
+    </tbody>
+</table>
+</div>
+
+<!--News-->
+<div class="bg-1">
+  <h1 class="title">
+    News
+  </h1>
+  <div class="row text-center">
+     <div class="col-sm-4 news one">
+      <div class="thumbnail">
+        <img src="assets/images/surf6.jpg" width="100%"  />
+        <p><strong>Mediterranean Ocean</strong></p> 
+        <p>La meteorologia, nel surf, gioca un ruolo fondamentale, soprattutto in Italia e in generale nel Mediterraneo...</p>
+        <button class="btn" data-toggle="modal" data-target="#myModal">Leggi tutto</button>
+      </div>
+    </div>
+    <div class="col-sm-4 news two">
+      <div class="thumbnail">
+        <img src="assets/images/surf5.jpg"  width="100%" >
+        <p><strong>Il global warming aumenta la potenza delle onde</strong></p>
+        <p>Il riscaldamento dell'oceano sta influenzando il comportamento del moto ondoso a livello planetario...<p></p>      
+        <button class="btn" data-toggle="modal" data-target="#myModal">Leggi tutto</button>
+      </div>
+  </div>
+  <div class="col-sm-4 news three">
+    <div class="thumbnail">
+      <img src="assets/images/surf8.jpg" width="100%" >
+      <p><strong>Campionato italiano di surf in Sardegna</strong></p>
+      <p>Un piccolo esercito di giovani talenti del surf è pronto ad arrivare a Buggerru...</p>
+      <button class="btn" data-toggle="modal" data-target="#myModal">Leggi tutto</button>
+    </div>
+  </div>
+  </div>   
+</div>
+
+<!-- Gallery -->
+<h1 class="title">
+  Gallery
+</h1>
+<div class="row gallery"> 
+  <div class="column">
+    <img src="assets/images/surf8.jpg">
+    <img src="assets/images/surf2.jpg" >
+    <img src="assets/images/surf3.jpg" >
+    <img src="assets/images/surf4.jpg" >
+    <img src="assets/images/surf1.jpg" >
+  </div>
+  <div class="column">
+    <img src="assets/images/surf1.jpg">
+    <img src="assets/images/surf3.jpg" >
+    <img src="assets/images/surf6.jpg" >
+    <img src="assets/images/surf6.jpg" >
+    <img src="assets/images/surf7.jpg" >
+  </div>
+  <div class="column">
+    <img src="assets/images/surf6.jpg">
+    <img src="assets/images/surf2.jpg" >
+    <img src="assets/images/surf1.jpg" >
+    <img src="assets/images/surf4.jpg" >
+    <img src="assets/images/surf5.jpg" >
+  </div> 
+  <div class="column">
+    <img src="assets/images/surf8.jpg">
+    <img src="assets/images/surf6.jpg" >
+    <img src="assets/images/surf5.jpg" >
+    <img src="assets/images/surf2.jpg" >
+    <img src="assets/images/surf1.jpg" >
+  </div>
+</div>
+
+<footer class="text-center">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <p> TNV Beaches - tnvmeteosurf@gmail.com </p>
+  <a href="#" class="fa fa-facebook"></a>
+  <a href="#" class="fa fa-instagram"></a>
+</footer>
 

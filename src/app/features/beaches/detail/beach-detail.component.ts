@@ -34,10 +34,7 @@ export class BeachDetailComponent implements OnInit {
         this.beach = data;
         this.getWeather();
         this.getTraffic();
-        
       });
-  
-  
   }
 
   deleteBeach(id) {

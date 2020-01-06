@@ -1,31 +1,47 @@
-body{font-family: sans-serif;}
-
-.row > div:hover {
-  cursor: pointer;
-  background-color: cornflowerblue;
-  color: white;
-}
+/* NAVBAR */
 .navbar-brand {
-  font-size: 30px;
-  font-family: Verdana;
+  font-size: 35px;
+  font-family: 'Lato', sans-serif;
   font: bold;
   padding-left: 20px;
+  color:orange;
+  margin-right: 60px;
 }
 
+.navbar-nav li a:hover {
+  color:orange;
+  border-bottom: 1px solid orange;
+}
+
+.navbar-nav{
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  font: medium;
+}
+
+/* HERO */
 #cover{padding: 200px 100px 220px 100px; text-align: center;
-  background: url(https://images.unsplash.com/photo-1495546992359-94a48035efca?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80) no-repeat center center fixed;
+  background: url(assets/images/beach4.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;}
-  .h1{font-size: 70px; font-weight: bold;}
-  .h2{font-size: 35px; max-width: 500px; margin: 0 auto}
-  .btn-outline-info{position: relative; top: 30px; right:50px; color: darkslategray; padding: 10px 30px; display: inline-block; border-radius: 10px;font-weight: bold;font-size: 20px; border-width: 3px;}
-  .btn-outline-warning{position: relative; top: 30px; left:50px; color: darkslategray; padding: 10px 30px; display: inline-block; border-radius: 10px; font-weight: bold; font-size: 20px; border-width: 3px;}
+  background-size: cover;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 80px;
+  font-family: 'Lato', sans-serif;
+  }
   
+  .btn-outline-info{position: relative; top: 30px; right:50px; color: darkslategray; padding: 10px 30px; display: inline-block; border-radius: 10px;font-family: 'Lato', sans-serif;font-weight: bold;font-size: 20px; border-width: 3px;}
+  .btn-outline-warning{position: relative; top: 30px; left:50px; color: darkslategray; padding: 10px 30px; display: inline-block; border-radius: 10px;font-family: 'Lato', sans-serif; font-weight: bold; font-size: 20px; border-width: 3px;}
+  
+
+  
+/* FOOTER */
 footer{
-  background-color: #393939;
-  padding:20px;
+  background-color:#212529  ;
+  padding:10px;
 }
   footer p{
     color: white;
@@ -33,11 +49,9 @@ footer{
   }
 
   .fa {
-    padding: 20px;
     font-size: 30px;
     width: 50px;
     text-decoration: none;
-    margin: 5px 2px;
   }
   
   .fa:hover {
@@ -52,5 +66,4 @@ footer{
     background: transparent;
     color: white;
   }
-
     

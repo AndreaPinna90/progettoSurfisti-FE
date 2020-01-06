@@ -1,29 +1,40 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="http://localhost:4200/">TNV Beaches </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+  <a class="navbar-brand" href="http://localhost:4200/">
+    <img src="assets/images/logo_tnv_light_2019.png"  alt="Home page" height="40">
+  </a>
   <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
+    <ul class="nav navbar-nav navbar-right">
+      <li class="nav-item ">
+        <a class="nav-link" href="http://localhost:4200/">Home</a>
+      </li>
       <li class="nav-item active">
-        <a class="nav-link" href="http://localhost:4200/">Home </a>
+        <a class="nav-link" href="http://localhost:4200/beaches/list">Meteo</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="http://localhost:4200/beaches/list">Meteo <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="http://localhost:4200/beaches/surf">Surf </a>
+      <li class="nav-item ">
+        <a class="nav-link" href="http://localhost:4200/beaches/surf">Surf</a>
       </li>
     </ul>
   </div>
 </nav>
+
+<!--Header-->
+<div class="row header">
+  <div class="col-sm-12 header">
+    <h1 class="page-title">Meteo</h1>
+  </div>
+</div>
+
+<!--Table-->
 <div class="container">
   <h1 class="my-3">
-    Le 10 spiagge migliori della Sardegna
+    Le spiagge più belle della Sardegna.
     <a [routerLink]="['../create']">
       <i class="fas fa-plus-square" aria-hidden="true"></i>
     </a>
   </h1>
+
 
   <div *ngIf="loaded" class="order-list my-3 text-right">
     <h4 class="d-inline-block mr-2">Ordina per: </h4>
@@ -62,15 +73,15 @@
     </tr>
     </thead>
     <tbody>
-    <tr class="table-element cursor-pointer text-center" *ngFor="let beach of beaches.slice(0, 10)" (click)="goToDetails(beach.id)">
+    <tr class="table-element cursor-pointer text-center" *ngFor="let beach of beaches.slice(0, 15)" (click)="goToDetails(beach.id)">
       <td>{{ beach.name }}</td>
       <td>{{ beach.city + ' (' + beach.province + ')' }}</td>
       <td><i class="fas fa-2x {{ getOrientationArrow(beach.orientation) }}"></i></td>
       <td class="text-center"><i class="fas fa-2x {{getInfoClass(beach.park)}}"></i></td>
       <td><i class="fas fa-2x {{getInfoClass(beach.summer_crowding)}}"></i></td>
       <td>
-        <!--<div class="rounded-circle m-auto text-center {{getTrafficClass(beach.traffic)}}"><p>{{beach.traffic}}</p></div>-->
-        <div class="rounded with text-center {{getTrafficClass(beach.traffic)}}"><p>{{beach.traffic}}</p></div>
+<!--        <div class="rounded-circle m-auto text-center {{getTrafficClass(beach.traffic)}}"><p>{{beach.traffic}}</p></div>-->
+      <div class="rounded with text-center {{getTrafficClass(beach.traffic)}}"><p>{{beach.traffic}}</p></div>
       </td>
       <td class="weather-icon"><img [src]="beach.weatherIcon" alt="meteo"></td>
      
@@ -82,3 +93,11 @@
 
   <h3 *ngIf="!loaded">Loading...</h3>
 </div>
+
+<footer class="text-center">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <p> TNV Beaches - tnvmeteosurf@gmail.com </p>
+  <a href="#" class="fa fa-facebook"></a>
+  <a href="#" class="fa fa-instagram"></a>
+</footer>
+
