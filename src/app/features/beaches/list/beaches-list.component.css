@@ -40,6 +40,20 @@ div.col-sm-12.header .page-title {
 }
 
 /* TABLE */
+.container{
+  padding-top: 30px;
+  padding-bottom: 20px;
+  font-family: 'Lato', sans-serif;
+}
+
+.row.text-center {
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: 'Lato', sans-serif;
+}
+
 .weather-icon {
   padding: 0;
 }
@@ -60,11 +74,15 @@ div .rounded-circle p {
 }
 
 .table-element:hover {
-  background-color: lightblue;
+  background-color:rgb(253, 206, 119);
 }
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+#addButton{
+  color: orange;
 }
 
 /* FOOTER */
