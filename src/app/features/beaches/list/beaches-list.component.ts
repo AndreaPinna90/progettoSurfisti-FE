@@ -102,4 +102,30 @@ export class BeachesListComponent implements OnInit {
 
     return `fa-arrow-alt-circle-${direction}`;
   };
+
+  getWindDirectionArrow = (wind_direction: string) => {
+    let windDirection;
+
+    switch (wind_direction) {
+      case 'N': windDirection = 'up';
+        break;
+      case 'NO': windDirection = 'up-left';
+        break;
+      case 'NE': windDirection = 'up-right';
+        break;
+      case 'S': windDirection = 'down';
+        break;
+      case 'SO': windDirection = 'down-left';
+        break;
+      case 'SE': windDirection = 'down-right';
+        break;
+      case 'E': windDirection = 'right';
+        break;
+      case 'O': windDirection = 'left';
+        break;
+        
+    }
+    
+    return `icomoon icon-arrow-${windDirection}-2`;
+  };
 }
