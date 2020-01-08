@@ -66,7 +66,8 @@
       <td>{{ beach.city + ' (' + beach.province + ')' }}</td>
       <td>{{ beach.latitude}} <br> {{beach.longitude }}</td>
       <td>{{beach.wind_speed}}</td>
-      <td>{{beach.wind_direction}}</td>
+      <td><i class="fas fa-2x {{ getWindDirectionArrow(beach.wind_direction) }}"></i></td>
+<!--<td>{{beach.wind_direction}}</td>-->
 <!--      <td>-->
 <!--        <div class="rounded-circle m-auto text-center {{getTrafficClass(beach.traffic)}}"><p>{{beach.traffic}}</p></div>-->
 <!--      </td>-->

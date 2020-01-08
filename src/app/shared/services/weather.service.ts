@@ -5,8 +5,8 @@ import {CurrentWeather, ForecastWeather} from '../models/Meteo';
 @Injectable()
 
 export class WeatherService {
-  private baseUrl = 'https://api.weatherbit.io/v2.0';
-  private apiKey = '18544eaed91744f5acf49b25210695d7';
+  private baseUrl = 'https://api.weatherbit.io/v2.0/current';
+  private apiKey = '9ff5e8563de144b5a0f01761357041ea';
 
   constructor(
     private http: HttpClient

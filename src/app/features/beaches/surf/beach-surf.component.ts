@@ -109,23 +109,39 @@ export class BeachSurfComponent implements OnInit {
     switch (wind_direction) {
       case 'N': windDirection = 'up';
         break;
-      case 'NO': windDirection = 'up-left';
+      case 'NNE': windDirection = 'up';
         break;
-      case 'NE': windDirection = 'up-right';
+      case 'NE': windDirection = 'right';
         break;
-      case 'S': windDirection = 'down';
-        break;
-      case 'SO': windDirection = 'down-left';
-        break;
-      case 'SE': windDirection = 'down-right';
+      case 'ENE': windDirection = 'right';
         break;
       case 'E': windDirection = 'right';
         break;
-      case 'O': windDirection = 'left';
+      case 'ESE': windDirection = 'right';
         break;
-        
+      case 'SE': windDirection = 'down';
+        break;
+      case 'SSE': windDirection = 'down';
+        break;
+      case 'S': windDirection = 'down';
+        break;
+      case 'SSW': windDirection = 'down';
+        break;
+      case 'SW': windDirection = 'down';
+        break;
+      case 'WSW': windDirection = 'left';
+        break;
+      case 'W': windDirection = 'left';
+        break;
+      case 'WNW': windDirection = 'left';
+        break;
+      case 'NW': windDirection = 'up';
+        break;
+      case 'NNW': windDirection = 'up';
+        break;
+              
     }
     
-    return `icomoon icon-arrow-${windDirection}-2`;
+    return `fa-arrow-alt-circle-${windDirection}`;
   };
 }

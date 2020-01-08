@@ -50,6 +50,8 @@ export class BeachDetailComponent implements OnInit {
     this.weatherService.getCurrent(this.beach.city, this.beach.latitude, this.beach.longitude)
       .subscribe((weather: CurrentWeather) => {
         this.beach.weatherIcon = this.getWeatherIconPath(weather.data[0].weather.icon);
+        this.beach.wind_speed= weather.data[0].wind_spd;
+        this.beach.wind_direction = weather.data[0].wind_cdir_full;
       }, err => {
         console.error(err);
       });
