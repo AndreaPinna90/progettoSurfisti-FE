@@ -75,7 +75,7 @@ export class BeachDetailComponent implements OnInit {
 
 getInfoClassBeachPark = (value: boolean) => value ? 'fa-parking text-dark' : 'fa-times-circle text-danger';
 getInfoClassFoodService = (value: boolean) => value ? 'fa-utensils text-dark' : 'fa-times-circle text-danger';
-getInfoClassLifeguard = (value: boolean) => value ? 'fa-swimmer text-dark' : 'fa-times-circle text-danger';
+getInfoClassLifeguard = (value: boolean) => value ? 'fa-life-ring text-dark' : 'fa-times-circle text-danger';
 getInfoClassDogsAllowed = (value: boolean) => value ? 'fa-dog text-dark' : 'fa-times-circle text-danger';
 getInfoClassSummerCrowding = (value: boolean) => value ? 'fa-users text-dark' : 'fa-times-circle text-danger';
 }
