@@ -1,14 +1,43 @@
+<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+  <a class="navbar-brand" href="http://localhost:4200/">
+    <img src="assets/images/Logo_surf2.png"  alt="Home page" height="60">
+  </a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="nav navbar-nav navbar-right">
+      <li class="nav-item ">
+        <a class="nav-link" href="http://localhost:4200/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://localhost:4200/beaches/list">Meteo</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://localhost:4200/beaches/surf">Surf</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!--Header-->
+<div class="row header">
+  <div class="col-sm-12 header">
+    <h1 class="page-title">{{ beach.name }} - {{beach.city}} ({{beach.province}})</h1>
+  </div>
+</div>
+
+<!--Card-->
 <div *ngIf="beach" class="container">
 
   <div class="row col-md-8 mt-4">
     <div class="card w-100">
       <div class="card-header">
-        <h1>
+        <!--<h1>
           <a [routerLink]="['../../list']" class="mr-3">
             <i class="fas fa-arrow-left" aria-hidden="true"></i>
-          </a>
+          </a> 
           {{ beach.name }} - {{beach.city}} ({{beach.province}})
-        </h1>
+        </h1>-->
       </div>
       <div class="card-body">
         <div class="row">
@@ -21,12 +50,20 @@
               <div id ="trafficIcon" class = "rounded with text-center {{getTrafficClass(beach.traffic)}}"><b>{{beach.traffic}}</b></div>
 
           </div>
-            <div class="my-3"><b class="mr-2">Orientamento:</b> {{ beach.orientation }} </div>
-            <div class="my-3"><b class="mr-2">Lat:</b> {{beach.latitude}} - <b>Long:</b> {{beach.longitude}} </div>
-            <div class="my-3"><b class="mr-2">Vento:</b> {{beach.wind_speed}} m/s </div>
-            <div class="my-3"><b class="mr-2">Direz. vento:</b> {{beach.wind_direction}} </div>
+            <div class="my-3"><b class="mr-2">Orientamento</b>{{ beach.orientation }}</div>
+            <div class="my-3"><b class="mr-2">Lat:</b>{{beach.latitude}} - <b>Long:</b> {{beach.longitude}}</div>
+            <div class="my-3"><b class="mr-2">Vento</b>{{ beach.wind_speed}} m/s</div>
+            <div class="my-3"><b class="mr-2">Direz. vento</b>{{ beach.wind_direction}}</div>
           </div>
           <div class="col-md-12 my-3">
+            <h3>Servizi disponibili:</h3>
+            <div class="col-md-12"*ngIf="beach.park"><i class="mr-1 fas {{getInfoClassBeachPark(beach.park)}}"></i>Parcheggio</div>
+            <div class="col-md-12"*ngIf="beach.food_service"><i class="mr-1 fas {{getInfoClassFoodService(beach.food_service)}}"></i>Ristorazione</div>
+            <div class="col-md-12"*ngIf="beach.lifeguard"><i class="mr-1 fas {{getInfoClassLifeguard(beach.lifeguard)}}"></i>Bagnino</div>
+            <div class="col-md-12"*ngIf="beach.dogs_allowed"><i class="mr-1 fas {{getInfoClassDogsAllowed(beach.dogs_allowed)}}"></i>Cani ammessi</div>
+            <div class="col-md-12"*ngIf="beach.summer_crowding"><i class="mr-1 fas {{getInfoClassSummerCrowding(beach.summer_crowding)}}"></i>Affollamento estivo</div>
+          </div>
+          <!--<div class="col-md-12 my-3">
             <h3>Info e servizi:</h3>
             <div class="col-md-12"><i class="mr-1 fas {{getInfoClass(beach.park)}}"></i>Parcheggio</div>
             <div class="col-md-12"><i class="mr-1 fas {{getInfoClass(beach.food_service)}}"></i>Ristorazione</div>
@@ -37,9 +74,17 @@
         </div>
       </div>
       <div class="card-footer text-right">
-        <!--<a [routerLink]="['../../edit', beach.id]" class="btn btn-success">EDIT</a>
+        <a [routerLink]="['../../edit', beach.id]" class="btn btn-success">EDIT</a>
         <button class="btn btn-danger ml-2" type="submit" (click)="deleteBeach(beach.id)">DELETE</button>-->
       </div>
-    </div>
+    </div> 
   </div>
 </div>
+</div>
+
+<footer class="text-center">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <p> TNV Beaches - tnvmeteosurf@gmail.com </p>
+  <a href="#" class="fa fa-facebook"></a>
+  <a href="#" class="fa fa-instagram"></a>
+</footer>

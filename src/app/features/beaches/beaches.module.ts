@@ -16,6 +16,8 @@ import {TrafficService} from '../../shared/services/traffic.service';
 import {SortService} from '../../shared/services/sort.service';
 import { from } from 'rxjs';
 import { BeachSurfComponent } from './surf/beach-surf.component';
+import { NewsComponent } from './news/news.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { BeachSurfComponent } from './surf/beach-surf.component';
     BeachEditComponent,
     BeachDetailComponent,
     BeachCreateComponent,
-    BeachSurfComponent
+    BeachSurfComponent,
+    NewsComponent,
+    GalleryComponent
   ],
   imports: [
     CoreModule,

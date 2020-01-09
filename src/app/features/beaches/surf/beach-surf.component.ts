@@ -142,6 +142,6 @@ export class BeachSurfComponent implements OnInit {
               
     }
     
-    return `fa-arrow-alt-circle-${windDirection}`;
+    return `fa-long-arrow-alt-${windDirection}`;
   };
 }

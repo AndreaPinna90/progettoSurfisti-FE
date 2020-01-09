@@ -5,6 +5,8 @@ import {BeachDetailComponent} from './detail/beach-detail.component';
 import {BeachCreateComponent} from './create/beach-create.component';
 import {BeachEditComponent} from './edit/beach-edit.component';
 import {BeachSurfComponent} from './surf/beach-surf.component';
+import {NewsComponent} from './news/news.component';
+import {GalleryComponent} from './gallery/gallery.component';
 
 const routes: Routes = [
   {
@@ -31,6 +33,14 @@ const routes: Routes = [
   {
     path: 'surf',
     component: BeachSurfComponent,
+  },
+  {
+    path: 'news',
+    component: NewsComponent,
+  },
+  {
+    path: 'gallery',
+    component: GalleryComponent,
   }
 ];
 

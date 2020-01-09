@@ -102,46 +102,4 @@ export class BeachesListComponent implements OnInit {
 
     return `fa-arrow-alt-circle-${direction}`;
   };
-
-  getWindDirectionArrow = (wind_direction: string) => {
-    let windDirection;
-
-    switch (wind_direction) {
-      case 'N': windDirection = 'up';
-        break;
-      case 'NNE': windDirection = 'up';
-        break;
-      case 'NE': windDirection = 'right';
-        break;
-      case 'ENE': windDirection = 'right';
-        break;
-      case 'E': windDirection = 'right';
-        break;
-      case 'ESE': windDirection = 'right';
-        break;
-      case 'SE': windDirection = 'down';
-        break;
-      case 'SSE': windDirection = 'down';
-        break;
-      case 'S': windDirection = 'down';
-        break;
-      case 'SSW': windDirection = 'down';
-        break;
-      case 'SW': windDirection = 'down';
-        break;
-      case 'WSW': windDirection = 'left';
-        break;
-      case 'W': windDirection = 'left';
-        break;
-      case 'WNW': windDirection = 'left';
-        break;
-      case 'NW': windDirection = 'up';
-        break;
-      case 'NNW': windDirection = 'up';
-        break;
-              
-    }
-    
-    return `fa-arrow-alt-circle-${windDirection}`;
-  };
 }

@@ -51,7 +51,7 @@ export class BeachDetailComponent implements OnInit {
       .subscribe((weather: CurrentWeather) => {
         this.beach.weatherIcon = this.getWeatherIconPath(weather.data[0].weather.icon);
         this.beach.wind_speed= weather.data[0].wind_spd;
-        this.beach.wind_direction = weather.data[0].wind_cdir_full;
+        this.beach.wind_direction = weather.data[0].wind_cdir;
       }, err => {
         console.error(err);
       });
@@ -71,4 +71,11 @@ export class BeachDetailComponent implements OnInit {
   getWeatherIconPath = (icon: string): string => `https://www.weatherbit.io/static/img/icons/${icon}.png`;
   getTrafficClass = (value: number) => value >= 80 ? 'bg-danger' : (value > 70 && value < 80 ? 'bg-warning' : 'bg-success');
   getInfoClass = (value: boolean) => value ? 'fa-check-circle text-success' : 'fa-times-circle text-danger';
+
+
+getInfoClassBeachPark = (value: boolean) => value ? 'fa-parking text-dark' : 'fa-times-circle text-danger';
+getInfoClassFoodService = (value: boolean) => value ? 'fa-utensils text-dark' : 'fa-times-circle text-danger';
+getInfoClassLifeguard = (value: boolean) => value ? 'fa-swimmer text-dark' : 'fa-times-circle text-danger';
+getInfoClassDogsAllowed = (value: boolean) => value ? 'fa-dog text-dark' : 'fa-times-circle text-danger';
+getInfoClassSummerCrowding = (value: boolean) => value ? 'fa-users text-dark' : 'fa-times-circle text-danger';
 }

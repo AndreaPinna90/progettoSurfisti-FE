@@ -40,6 +40,15 @@ div.col-sm-12.header .page-title {
 }
 
 /* TABLE */
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]:checked + label:before {
+  background-color: orange;
+  border-color: darkorange;
+}
+
 .container{
   padding-top: 30px;
   padding-bottom: 20px;
