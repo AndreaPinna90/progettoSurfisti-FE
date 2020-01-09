@@ -25,6 +25,11 @@ export class SortService {
           this.integerCriteria(a.weather.data[0].clouds, b.weather.data[0].clouds)
         );
         break;
+      case 'wind_speed':
+          data = data.sort((a: Beach, b: Beach) =>
+            this.integerCriteria(a.weather.data[0].wind_spd, b.weather.data[0].wind_spd)
+          );
+        break;
     }
 
     return data;
