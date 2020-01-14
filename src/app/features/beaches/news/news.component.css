@@ -1,0 +1,145 @@
+/* NAVBAR */
+.navbar-brand {
+  font-size: 35px;
+  font-family: 'Lato', sans-serif;
+  font: bold;
+  padding-left: 20px;
+  color:orange;
+  margin-right: 60px;
+  padding-bottom: 10px;
+}
+
+.navbar-nav li a:hover {
+  color:orange;
+  border-bottom: 1px solid orange;
+}
+
+.navbar-nav{
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  font: medium;
+}
+
+
+/* HEADER */
+div.col-sm-12.header {
+background: url(assets/images/beach3_m.jpg) no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+text-align: center;
+font-family: 'Lato', sans-serif;
+margin-top: 70px;
+padding-top: 100px;
+padding-bottom: 100px;
+}
+
+div.col-sm-12.header .page-title {
+text-transform: uppercase;
+font-weight: 800;
+font-size: 80px;
+}
+
+body{
+  background-color: #2d2d30;
+}
+/* NEWS */
+.bg-1{
+    background: #2d2d30;
+    color: #bdbdbd;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-family: 'Lato', sans-serif;
+  }
+  .bg-1 p{
+    margin-top: auto;
+  }
+  
+  .col-sm-4.news {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: cornsilk;
+    border-radius: 0px; 
+    border-top:  10px solid #2d2d30;
+    border-bottom:  10px solid #2d2d30;
+    
+  }
+  
+  .col-sm-4.news.two {
+    border-left: 10px solid #2d2d30;
+    border-right: 10px solid #2d2d30;
+    border-top:  10px solid #2d2d30;
+    border-bottom:  10px solid #2d2d30;
+  }
+  
+  .title{
+    margin-top: 20px;
+    font-family: 'Lato', sans-serif;
+    
+  }
+  
+  
+  /* Remove border and add padding to thumbnails */
+  .thumbnail {
+  
+    border: none;
+    border-radius: 4px;
+  }
+  
+  .thumbnail p {
+    margin-top: 15px;
+    color: #555;
+  }
+  
+  /* Black buttons with extra padding and without rounded borders 
+  .btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 5px;
+    transition: .2s;
+  }
+  
+  /* On hover, the color of .btn will transition to white with black text
+  .btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+    border-radius: 5px;
+  }
+   */
+
+/* FOOTER */
+footer{
+  background-color:#212529  ;
+  padding:10px;
+  padding-top: 20px;
+}
+  footer p{
+    color: rgb(233, 233, 233);
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+  }
+
+  .fa {
+    font-size: 30px;
+    width: 50px;
+    text-decoration: none;
+  }
+  
+  .fa:hover {
+    opacity: 0.7;
+}
+
+  .fa-facebook {
+    background:transparent;
+    color: white;
+  }
+  .fa-instagram {
+    background: transparent;
+    color: white;
+  }
+    
+  
+  

@@ -4,16 +4,19 @@
   <a class="navbar-brand" href="http://localhost:4200/">
     <img src="assets/images/Logo_surf2.png"  alt="Home page" height="60">
   </a>
-  <div class="collapse navbar-collapse" id="navbarNav">
+  <div class="navbar-responsive-collapse" id="navbarNav">
     <ul class="nav navbar-nav navbar-right">
-      <li class="nav-item ">
-        <a class="nav-link" href="http://localhost:4200/">Home</a>
-      </li>
       <li class="nav-item active">
-        <a class="nav-link" href="http://localhost:4200/beaches/list">Meteo</a>
+        <a class="nav-link" href="http://localhost:4200/beaches/list">Tourist</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="http://localhost:4200/beaches/surf">Surf</a>
+        <a class="nav-link" href="http://localhost:4200/beaches/surf">Surfer</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="http://localhost:4200/beaches/news">News</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="http://localhost:4200/beaches/gallery">Gallery</a>
       </li>
     </ul>
   </div>
@@ -22,7 +25,7 @@
 <!--Header-->
 <div class="row header">
   <div class="col-sm-12 header">
-    <h1 class="page-title">Meteo</h1>
+    <h1 class="page-title">Tourist</h1>
   </div>
 </div>
 
@@ -76,12 +79,17 @@
     <tr class="table-element cursor-pointer text-center" *ngFor="let beach of beaches.slice(0, 15)" (click)="goToDetails(beach.id)">
       <td>{{ beach.name }}</td>
       <td>{{ beach.city + ' (' + beach.province + ')' }}</td>
-      <td><i class="fas fa-2x {{ getOrientationArrow(beach.orientation) }}"></i></td>
-      <td class="text-center"><i class="fas fa-2x {{getInfoClass(beach.park)}}"></i></td>
-      <td><i class="fas fa-2x {{getInfoClass(beach.summer_crowding)}}"></i></td>
+      <td> <div *ngIf="beach.orientation == 'Sud'"> <img src="assets/images/orientation/image-down2.png" alt=""> </div>
+        <div *ngIf="beach.orientation == 'Nord'"> <img src="assets/images/orientation/image-up2.png" alt=""> </div>
+        <div *ngIf="beach.orientation == 'Est'"> <img src="assets/images/orientation/image-right2.png" alt=""> </div>
+        <div *ngIf="beach.orientation == 'Ovest'"> <img src="assets/images/orientation/image-left2.png" alt=""> </div> 
+   </td>
+      <!-- <td><i class="fas fa-2x {{ getOrientationArrow(beach.orientation) }}"></i></td> -->
+      <td class="text-center"><i class="fas fa-lg {{getInfoClassPark(beach.park)}}"></i></td>
+      <td><i class="fas fa-lg {{getInfoClassCrowd(beach.summer_crowding)}}"></i></td>
       <td>
 <!--        <div class="rounded-circle m-auto text-center {{getTrafficClass(beach.traffic)}}"><p>{{beach.traffic}}</p></div>-->
-      <div class="rounded with text-center {{getTrafficClass(beach.traffic)}}"><p>{{beach.traffic}}</p></div>
+      <div class="rounded with text-center {{getTrafficClass(beach.traffic)}}"><p>{{beach.traffic}} %</p></div>
       </td>
       <td class="weather-icon"><img [src]="beach.weatherIcon" alt="meteo"></td>
      
@@ -94,9 +102,11 @@
   <h3 *ngIf="!loaded">Loading...</h3>
 </div>
 
+
+<!--Footer-->
 <footer class="text-center">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <p> TNV Beaches - tnvmeteosurf@gmail.com </p>
+  <p> TNV Surf - tnvsurf@gmail.com </p>
   <a href="#" class="fa fa-facebook"></a>
   <a href="#" class="fa fa-instagram"></a>
 </footer>

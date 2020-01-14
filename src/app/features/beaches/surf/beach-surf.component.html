@@ -4,16 +4,19 @@
   <a class="navbar-brand" href="http://localhost:4200/">
     <img src="assets/images/Logo_surf2.png"  alt="Home page" height="60">
   </a>
-  <div class="collapse navbar-collapse" id="navbarNav">
+  <div class="navbar-responsive-collapse" id="navbarNav">
     <ul class="nav navbar-nav navbar-right">
-      <li class="nav-item ">
-        <a class="nav-link" href="http://localhost:4200/">Home</a>
-      </li>
       <li class="nav-item">
-        <a class="nav-link" href="http://localhost:4200/beaches/list">Meteo</a>
+        <a class="nav-link" href="http://localhost:4200/beaches/list">Tourist</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="http://localhost:4200/beaches/surf">Surf</a>
+        <a class="nav-link" href="http://localhost:4200/beaches/surf">Surfer</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="http://localhost:4200/beaches/news">News</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="http://localhost:4200/beaches/gallery">Gallery</a>
       </li>
     </ul>
   </div>
@@ -22,7 +25,7 @@
 <!--Header-->
 <div class="row header">
   <div class="col-sm-12 header">
-    <h1 class="page-title">Surf</h1>
+    <h1 class="page-title">Surfer</h1>
   </div>
 </div>    
 
@@ -44,10 +47,6 @@
         <input type="radio" id="wind_direction" name="radio" class="custom-control-input" value="wind_direction"
                [(ngModel)]="radioValue">
         <label class="custom-control-label" for="wind_direction">Direzione Vento</label>
-      </div>
-      <div class="custom-control custom-radio custom-control-inline">
-        <input type="radio" id="weather" name="radio" class="custom-control-input" value="weather" [(ngModel)]="radioValue">
-        <label class="custom-control-label" for="weather">Meteo</label>
       </div>
     </form>
   </div>
@@ -84,7 +83,7 @@
 </div>
 
 <!--News-->
-<div class="bg-1">
+<!--<div class="bg-1">
   <h1 class="title">
     News
   </h1>
@@ -114,10 +113,10 @@
     </div>
   </div>
   </div>   
-</div>
+</div>-->
 
 <!-- Gallery -->
-<h1 class="title">
+<!--<h1 class="title">
   Gallery
 </h1>
 <div class="row gallery"> 
@@ -149,11 +148,12 @@
     <img src="assets/images/surf2.jpg" >
     <img src="assets/images/surf1.jpg" >
   </div>
-</div>
+</div>-->
 
+<!--Footer-->
 <footer class="text-center">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <p> TNV Beaches - tnvmeteosurf@gmail.com </p>
+  <p> TNV Surf - tnvsurf@gmail.com </p>
   <a href="#" class="fa fa-facebook"></a>
   <a href="#" class="fa fa-instagram"></a>
 </footer>

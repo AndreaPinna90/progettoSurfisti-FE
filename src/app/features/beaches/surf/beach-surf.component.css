@@ -6,6 +6,7 @@
   padding-left: 20px;
   color:orange;
   margin-right: 60px;
+  padding-bottom: 10px;
 }
 
 .navbar-nav li a:hover {
@@ -19,9 +20,10 @@
   font: medium;
 }
 
+
 /* HEADER */
 div.col-sm-12.header {
-  background: url(assets/images/beach3.jpg) no-repeat center center fixed;
+  background: url(assets/images/beach3_m.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -29,9 +31,8 @@ div.col-sm-12.header {
   text-align: center;
   font-family: 'Lato', sans-serif;
   margin-top: 70px;
-  padding-top: 200px;
+  padding-top: 100px;
   padding-bottom: 100px;
-  
 }
 div.col-sm-12.header .page-title {
   text-transform: uppercase;
@@ -99,10 +100,10 @@ div .rounded-circle p {
   padding-top: 10px;
   padding-bottom: 20px;
   font-family: 'Lato', sans-serif;
-  
 }
 .bg-1 p{
   margin-top: auto;
+ 
 }
 
 .col-sm-4.news {
@@ -111,7 +112,8 @@ div .rounded-circle p {
   background-color: cornsilk;
   border-radius: 0px; 
   border-top:  10px solid #2d2d30;
-  border-bottom:  10px solid #2d2d30; 
+  border-bottom:  10px solid #2d2d30;
+  margin-left: 20px; 
 }
 
 .col-sm-4.news.two {
@@ -210,30 +212,32 @@ div .rounded-circle p {
 
 /* FOOTER */
 footer{
-    background-color:#212529  ;
-    padding:10px;
+  background-color:#212529  ;
+  padding:10px;
+  padding-top: 20px;
+}
+  footer p{
+    color: rgb(233, 233, 233);
+    text-align: center;
+    font-family: 'Lato', sans-serif;
   }
-    footer p{
-      color: white;
-      text-align: center;
-    }
+
+  .fa {
+    font-size: 30px;
+    width: 50px;
+    text-decoration: none;
+  }
   
-    .fa {
-      font-size: 30px;
-      width: 50px;
-      text-decoration: none;
-    }
+  .fa:hover {
+    opacity: 0.7;
+}
+
+  .fa-facebook {
+    background:transparent;
+    color: white;
+  }
+  .fa-instagram {
+    background: transparent;
+    color: white;
+  }
     
-    .fa:hover {
-      opacity: 0.7;
-  }
-  
-    .fa-facebook {
-      background:transparent;
-      color: white;
-    }
-    .fa-instagram {
-      background: transparent;
-      color: white;
-    }
-  

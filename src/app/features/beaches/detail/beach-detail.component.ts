@@ -69,13 +69,13 @@ export class BeachDetailComponent implements OnInit {
   };
 
   getWeatherIconPath = (icon: string): string => `https://www.weatherbit.io/static/img/icons/${icon}.png`;
-  getTrafficClass = (value: number) => value >= 80 ? 'bg-danger' : (value > 70 && value < 80 ? 'bg-warning' : 'bg-success');
+  getTrafficClass = (value: number) => value >= 80 ? '' : (value > 70 && value < 80 ? '' : '');
   getInfoClass = (value: boolean) => value ? 'fa-check-circle text-success' : 'fa-times-circle text-danger';
 
 
 getInfoClassBeachPark = (value: boolean) => value ? 'fa-parking text-dark' : 'fa-times-circle text-danger';
 getInfoClassFoodService = (value: boolean) => value ? 'fa-utensils text-dark' : 'fa-times-circle text-danger';
-getInfoClassLifeguard = (value: boolean) => value ? 'fa-life-ring text-dark' : 'fa-times-circle text-danger';
+getInfoClassLifeguard = (value: boolean) => value ? 'fa-swimmer text-dark' : 'fa-times-circle text-danger';
 getInfoClassDogsAllowed = (value: boolean) => value ? 'fa-dog text-dark' : 'fa-times-circle text-danger';
 getInfoClassSummerCrowding = (value: boolean) => value ? 'fa-users text-dark' : 'fa-times-circle text-danger';
 }

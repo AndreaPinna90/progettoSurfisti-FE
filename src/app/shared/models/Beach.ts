@@ -14,6 +14,10 @@ export interface Beach {
   dogs_allowed?: boolean;
   summer_crowding?: boolean;
   photo?: string;
+  photo1?: string;
+  photo2?: string;
+  photo3?: string;
+  photo4?: string;
   weatherIcon?: string;
   weather: CurrentWeather;
   traffic?: number;

@@ -1,4 +1,4 @@
-/* NAVBAR */
+/* NAVBAR 
 .navbar-brand {
   font-size: 35px;
   font-family: 'Lato', sans-serif;
@@ -18,10 +18,10 @@
   font-family: 'Lato', sans-serif;
   font-size: 20px;
   font: medium;
-}
+}*/
 
 /* HERO */
-#cover{padding: 200px 100px 220px 100px; text-align: center;
+#cover{padding: 110px 100px 220px 100px; text-align: center;
   background: url(assets/images/beach4.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -34,8 +34,8 @@
   font-family: 'Lato', sans-serif;
   }
   
-  .btn-outline-info{position: relative; top: 30px; right:50px; color: darkslategray; padding: 10px 30px; display: inline-block; border-radius: 10px;font-family: 'Lato', sans-serif;font-weight: bold;font-size: 20px; border-width: 3px;}
-  .btn-outline-warning{position: relative; top: 30px; left:50px; color: darkslategray; padding: 10px 30px; display: inline-block; border-radius: 10px;font-family: 'Lato', sans-serif; font-weight: bold; font-size: 20px; border-width: 3px;}
+  .btn-outline-info{position: relative; top: 30px; right:50px; color: #212529;; padding: 10px 30px; display: inline-block; border-radius: 10px;font-family: 'Lato', sans-serif;font-weight: bold;font-size: 20px; border-width: 3px;border-color: #212529;}
+  .btn-outline-warning{position: relative; top: 30px; left:50px; color:#212529;; padding: 10px 30px; display: inline-block; border-radius: 10px;font-family: 'Lato', sans-serif; font-weight: bold; font-size: 20px; border-width: 3px;border-color: #212529;}
   
 
   
@@ -43,10 +43,12 @@
 footer{
   background-color:#212529  ;
   padding:10px;
+  padding-top: 20px;
 }
   footer p{
-    color: white;
+    color: rgb(233, 233, 233);
     text-align: center;
+    font-family: 'Lato', sans-serif;
   }
 
   .fa {
