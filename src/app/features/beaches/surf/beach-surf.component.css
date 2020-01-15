@@ -40,6 +40,9 @@ div.col-sm-12.header .page-title {
   font-size: 80px;
 }
 
+h5{
+  font-family: 'Lato', sans-serif;
+}
 /* TABLE */
 input[type="radio"] {
   display: none;

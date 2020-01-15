@@ -37,7 +37,7 @@
       <i id="addButton" class="fas fa-plus-square" aria-hidden="true"></i>
     </a>-->
   </h1>
-
+  <h5>Meteo e previsioni del tempo in Sardegna, comprese informazioni sull'affollamento spiagge e sul traffico h24.</h5>
 
   <div *ngIf="loaded" class="order-list my-3 text-right">
     <h4 class="d-inline-block mr-2">Ordina per: </h4>
@@ -83,13 +83,13 @@
         <div *ngIf="beach.orientation == 'Nord'"> <img src="assets/images/orientation/image-up2.png" alt=""> </div>
         <div *ngIf="beach.orientation == 'Est'"> <img src="assets/images/orientation/image-right2.png" alt=""> </div>
         <div *ngIf="beach.orientation == 'Ovest'"> <img src="assets/images/orientation/image-left2.png" alt=""> </div> 
-      </td>
+   </td>
       <!-- <td><i class="fas fa-2x {{ getOrientationArrow(beach.orientation) }}"></i></td> -->
       <td class="text-center"><i class="fas fa-lg {{getInfoClassPark(beach.park)}}"></i></td>
       <td><i class="fas fa-lg {{getInfoClassCrowd(beach.summer_crowding)}}"></i></td>
       <td>
 <!--        <div class="rounded-circle m-auto text-center {{getTrafficClass(beach.traffic)}}"><p>{{beach.traffic}}</p></div>-->
-      <div class="{{getTrafficClass(beach.traffic)}}"><p>{{beach.traffic}} %</p></div>
+      <div class=" {{getTrafficClass(beach.traffic)}}"><p>{{beach.traffic}}%</p></div>
       </td>
       <td class="weather-icon"><img [src]="beach.weatherIcon" alt="meteo"></td>
      
