@@ -42,7 +42,7 @@
       <h2>Meteo di oggi:</h2>
         <div class="mb-0"><b>Meteo</b><img class="weather-icon" [src]="beach.weatherIcon"/></div>
         <div class="mb-3"><b class="mr-2">Traffico:</b>
-        <div id ="trafficIcon" class = "rounded with text-center {{getTrafficClass(beach.traffic)}}">{{beach.traffic}} %</div></div>
+        <div id ="trafficIcon" class = "{{getTrafficClass(beach.traffic)}}">{{beach.traffic}} %</div></div>
         <div class="my-3"><b class="mr-2">Orientamento spiaggia:</b>{{ beach.orientation }}</div>
         <div class="my-3"><b class="mr-2">Lat:</b>{{beach.latitude}} - <b>Long:</b> {{beach.longitude}}</div>
         <div class="my-3"><b class="mr-2">Vento:</b>{{ beach.wind_speed}} m/s</div>
