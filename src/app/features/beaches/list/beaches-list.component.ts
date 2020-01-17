@@ -15,7 +15,7 @@ import {SortService} from '../../../shared/services/sort.service';
 })
 export class BeachesListComponent implements OnInit {
   beaches: Array<Beach> = [];
-  radioValue = 'park';
+  radioValue = '';
   loaded = false;
 
   constructor(

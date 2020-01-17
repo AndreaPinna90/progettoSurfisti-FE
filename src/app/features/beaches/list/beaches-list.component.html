@@ -43,22 +43,20 @@
     <h4 class="d-inline-block mr-2">Ordina per: </h4>
     <form (change)="radioChange()">
       <div class="custom-control custom-radio custom-control-inline">
-        <input type="radio" id="park" name="radio" class="custom-control-input" value="park"
-               [(ngModel)]="radioValue">
+        <input type="radio" id="weather" name="radio" class="custom-control-input" value="weather" [(ngModel)]="radioValue">
+        <label class="custom-control-label" for="weather">Meteo</label>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" id="park" name="radio" class="custom-control-input" value="park" [(ngModel)]="radioValue">
         <label class="custom-control-label" for="park">Parcheggio</label>
       </div>
       <div class="custom-control custom-radio custom-control-inline">
-        <input type="radio" id="summer_crowding" name="radio" class="custom-control-input" value="summer_crowding"
-               [(ngModel)]="radioValue">
+        <input type="radio" id="summer_crowding" name="radio" class="custom-control-input" value="summer_crowding" [(ngModel)]="radioValue">
         <label class="custom-control-label" for="summer_crowding">Affollamento</label>
       </div>
       <div class="custom-control custom-radio custom-control-inline">
         <input type="radio" id="traffic" name="radio" class="custom-control-input" value="traffic" [(ngModel)]="radioValue">
         <label class="custom-control-label" for="traffic">Traffico</label>
-      </div>
-      <div class="custom-control custom-radio custom-control-inline">
-        <input type="radio" id="weather" name="radio" class="custom-control-input" value="weather" [(ngModel)]="radioValue">
-        <label class="custom-control-label" for="weather">Meteo</label>
       </div>
     </form>
   </div>
