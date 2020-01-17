@@ -55,6 +55,10 @@ body{
   margin-top: 10px;
 }
 
+.col-sm-12{
+  margin-bottom: 60px;
+}
+
 .col-sm-4{
   margin-top: 10px;
   padding-top: 20px;
